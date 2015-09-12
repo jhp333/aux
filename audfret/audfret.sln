@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "audfret", "audfret.vcproj", "{E0771C1D-CA93-4AC3-8AE1-E4C7AEA2A05E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "audfrets", "audfrets.vcproj", "{112F2724-7A48-491F-9E40-8175279352A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0771C1D-CA93-4AC3-8AE1-E4C7AEA2A05E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E0771C1D-CA93-4AC3-8AE1-E4C7AEA2A05E}.Debug|Win32.Build.0 = Debug|Win32
+		{E0771C1D-CA93-4AC3-8AE1-E4C7AEA2A05E}.Release|Win32.ActiveCfg = Release|Win32
+		{E0771C1D-CA93-4AC3-8AE1-E4C7AEA2A05E}.Release|Win32.Build.0 = Release|Win32
+		{112F2724-7A48-491F-9E40-8175279352A8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{112F2724-7A48-491F-9E40-8175279352A8}.Debug|Win32.Build.0 = Debug|Win32
+		{112F2724-7A48-491F-9E40-8175279352A8}.Release|Win32.ActiveCfg = Release|Win32
+		{112F2724-7A48-491F-9E40-8175279352A8}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

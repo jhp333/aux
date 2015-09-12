@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D47664BB-03AA-4D1C-80BF-FF3A919626EC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Echo</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\droppath.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\droppath.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(DropDev)include;$(DropDev)include\curl;$(MATLABPATH)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>audfret.lib;sigproc.lib;flyplus.lib;libcurl.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_AFXDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(DropDev)include;$(DropDev)include\curl;$(MATLABPATH)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>audfret.lib;sigproc.lib;flyplus.lib;libcurl.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="$(SrcPath)audstr.cpp" />
+    <ClCompile Include="$(SrcPath)batch.cpp" />
+    <ClCompile Include="$(SrcPath)CSession.cpp" />
+    <ClCompile Include="$(SrcPath)Display.cpp" />
+    <ClCompile Include="$(SrcPath)echo.cpp" />
+    <ClCompile Include="$(SrcPath)EchoMainWnd.cpp" />
+    <ClCompile Include="$(SrcPath)EchoMainWndOnCommand.cpp" />
+    <ClCompile Include="$(SrcPath)feature.cpp" />
+    <ClCompile Include="$(SrcPath)fileIO.cpp" />
+    <ClCompile Include="$(SrcPath)getpath.cpp" />
+    <ClCompile Include="$(SrcPath)LogReport.cpp" />
+    <ClCompile Include="$(SrcPath)multiProc.cpp" />
+    <ClCompile Include="$(SrcPath)OtherFunctions.cpp" />
+    <ClCompile Include="$(SrcPath)playStim.cpp" />
+    <ClCompile Include="$(SrcPath)pop.cpp" />
+    <ClCompile Include="$(SrcPath)procNameRule.cpp" />
+    <ClCompile Include="$(SrcPath)ResultWnd.cpp" />
+    <ClCompile Include="$(SrcPath)sessionScreen.cpp" />
+    <ClCompile Include="$(SrcPath)Settings.cpp" />
+    <ClCompile Include="$(SrcPath)StdAfx.cpp" />
+    <ClCompile Include="$(SrcPath)thread4pipe.cpp" />
+    <ClCompile Include="$(SrcPath)timeStamp.cpp" />
+    <ClCompile Include="$(SrcPath)WndDlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(SrcPath)batch.h" />
+    <ClInclude Include="$(SrcPath)CSession.h" />
+    <ClInclude Include="$(SrcPath)Echo.h" />
+    <ClInclude Include="$(SrcPath)EchoMainWnd.h" />
+    <ClInclude Include="$(SrcPath)fer.h" />
+    <ClInclude Include="$(SrcPath)LogReport.h" />
+    <ClInclude Include="$(SrcPath)msgCrack.h" />
+    <ClInclude Include="$(SrcPath)multiProc.h" />
+    <ClInclude Include="$(SrcPath)OtherFunctions.h" />
+    <ClInclude Include="$(SrcPath)pipeCommunication.h" />
+    <ClInclude Include="$(SrcPath)protocol.h" />
+    <ClInclude Include="$(SrcPath)resource.h" />
+    <ClInclude Include="$(SrcPath)ResultWnd.h" />
+    <ClInclude Include="$(SrcPath)Settings.h" />
+    <ClInclude Include="$(SrcPath)StdAfx.h" />
+    <ClInclude Include="$(SrcPath)WndDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="$(SrcPath)Echo.rc" />
+    <ResourceCompile Include="$(SrcPath)Wendy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Documents and Settings\bj\My Documents\Dropbox\dev\Echo\bin242.bin" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

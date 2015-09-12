@@ -1,0 +1,399 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+ECHO_MAIN DIALOGEX 0, 0, 575, 422
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ECHO (Speech testing controller)"
+MENU IDR_MENU1
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "&Open Session",IDC_OPEN_SESSION,21,47,50,14
+    GROUPBOX        "Testing Material",IDC_STATIC,9,4,555,157
+    LTEXT           "Session Name:",IDC_STATIC,27,95,48,8
+    PUSHBUTTON      "&Save Session",IDC_SAVE_SESSION,22,71,50,14
+    EDITTEXT        IDC_SESSION_NAME,23,108,59,14,ES_AUTOHSCROLL
+    LTEXT           "Wave File Directory",IDC_STATIC,99,29,63,8
+    EDITTEXT        IDC_WAV_DIRECTORY,97,41,161,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_WAVELIST,97,61,158,64,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | WS_VSCROLL
+    LTEXT           "Wave Name Convention:",IDC_STATIC,269,18,81,8
+    EDITTEXT        IDC_NAMERULE,267,34,160,14,ES_AUTOHSCROLL
+    LTEXT           "Total",IDC_STATIC,384,79,25,8
+    LTEXT           "?",IDC_NUM_COMBO,386,93,12,8
+    EDITTEXT        IDC_WAVELIST2,269,66,103,74,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | WS_VSCROLL
+    LTEXT           "Desired List from above rule and choice:",IDC_STATIC,273,53,128,8
+    LTEXT           "Combinations of possible wav files",IDC_STATIC,384,104,44,27
+    LTEXT           "&Number of Trials:",IDC_STATIC,32,214,54,8
+    EDITTEXT        IDC_NUM_TRIALS,88,211,27,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Begin",IDC_BEGIN,209,212,49,25
+    PUSHBUTTON      "Stop",IDC_STOP,263,212,49,25
+    EDITTEXT        IDC_RESPONSELOG,472,238,88,131,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | WS_VSCROLL
+    LTEXT           "Presenter Node:",IDC_STATIC,15,170,52,8
+    LTEXT           "Total",IDC_STATIC,99,129,17,8
+    LTEXT           "Files",IDC_STATIC,189,129,15,8
+    LTEXT           "??",IDC_NUM_FOLDER_FILES,143,128,32,8
+    PUSHBUTTON      "Connect Presenter",IDC_CONNECT_PRESENTER,175,167,69,14
+    COMBOBOX        IDC_NODELIST,71,167,93,72,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Presenter ID:",IDC_STATIC,253,170,42,8
+    EDITTEXT        IDC_WAVREADY,17,141,200,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    LTEXT           "Presentation &Level[dB rms]:",IDC_STATIC,421,211,90,8
+    COMBOBOX        IDC_LEVEL,512,209,33,72,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Feedbac&k",IDC_FEEDBACK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,133,207,48,10
+    CONTROL         "A&coustic Presentation",IDC_ACOUSTIC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,325,209,85,10
+    LTEXT           "&Message to Subj:",IDC_STATIC,10,392,57,8
+    EDITTEXT        IDC_TALK,65,390,477,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Practice",IDC_PRACTICE,482,169,66,30
+    LISTBOX         IDC_PLAYLIST,320,238,148,131,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Play List for this session",IDC_STATIC,320,228,75,8
+    GROUPBOX        "Experiment session",IDC_STATIC,9,200,555,185
+    LTEXT           "Presentation-Response Log",IDC_STATIC,472,228,88,8
+    LTEXT           "....",IDC_PRESENTER,297,170,133,8
+    CONTROL         "&Consonant",IDC_CONS,"Button",BS_AUTORADIOBUTTON,437,145,50,10
+    CONTROL         "&General",IDC_GENERAL,"Button",BS_AUTORADIOBUTTON,491,146,44,10
+    EDITTEXT        IDC_GENERAL_LIST,440,49,103,90,ES_MULTILINE | ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL
+    LTEXT           "General List of Sounds",IDC_GENERAL_INST1,439,19,72,8
+    LTEXT           "(Break by space or CR)",IDC_GENERAL_INST2,440,30,74,8
+    LTEXT           "(session not open)",IDC_SESSION_FNAME,23,17,216,8
+    LTEXT           "Presenter setting control:",IDC_STATIC,13,185,79,8
+    EDITTEXT        IDC_PRESENT_CONTROL,93,183,321,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Set",IDC_PRESENTER_SET,427,183,26,14
+    PUSHBUTTON      "RETRY",IDC_RETRY,204,212,37,25,NOT WS_VISIBLE
+    EDITTEXT        IDC_PROC,15,251,297,124,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    LTEXT           "AUX Processing\n(target = TG or TG1, TG2, TG3... for multiple tokens)",IDC_STATIC,15,234,172,16
+    LTEXT           "Current Score:",IDC_STATIC,349,371,50,8
+    LTEXT           "%",IDC_STATIC,429,371,11,8
+    LTEXT           "...",IDC_CURRENT_SCORE,401,371,24,8
+    LTEXT           "",IDC_CURRENT_CORR,451,371,14,8
+    LTEXT           "",IDC_CURRENT_TRIALS,489,371,15,8
+    LTEXT           "OF",IDC_STATIC,466,371,11,8
+    LTEXT           "CORRECT",IDC_STATIC,507,371,38,8
+    PUSHBUTTON      "Update",IDC_UPDATE,356,16,35,14,WS_DISABLED
+    CONTROL         "Single Response",IDC_1RESPONSE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,133,217,69,10
+    CONTROL         "Allow same tokens",IDC_ALLOWSAMETOKEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,133,228,71,10
+END
+
+RESULT DIALOG 0, 0, 397, 238
+STYLE DS_SETFONT | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Session Result"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Note to save",IDC_STATIC,21,177,56,9
+    EDITTEXT        IDC_NOTE2SAVE,97,181,263,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Save to File",IDC_SAVE2FILE,54,206,100,17
+    EDITTEXT        IDC_SUMMARY,7,7,376,161,ES_MULTILINE | ES_READONLY | WS_VSCROLL | NOT WS_TABSTOP
+    LTEXT           "(The content will be appended if the file already exists.)",IDC_STATIC,167,210,173,8
+    LTEXT           "(Max = 256 characters)",IDC_STATIC,18,190,74,8
+END
+
+MISSINGFILES DIALOG 0, 0, 288, 126
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "wav files NOT found in the specified directory:"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_MISSINGFILES,7,7,274,92,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | WS_VSCROLL
+END
+
+PIPE_COMM DIALOG 0, 0, 290, 190
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Message/Command with Presenter"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_MSG_LOG,0,7,290,182,ES_MULTILINE | ES_READONLY | WS_VSCROLL
+END
+
+BATCH DIALOG 0, 0, 394, 275
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "BATCH"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Current batch",IDC_STATIC,19,120,44,8
+    EDITTEXT        IDC_CURRENT_BATCH,19,132,299,127,ES_MULTILINE | WS_VSCROLL
+    LTEXT           "Previous batch",IDC_STATIC,18,14,48,8
+    EDITTEXT        IDC_PREV_BATCH,17,25,299,80,ES_MULTILINE | ES_READONLY | WS_VSCROLL
+    PUSHBUTTON      "&GO",IDC_GO,337,27,38,119
+    PUSHBUTTON      "&STOP",IDC_STOP,337,158,38,98
+END
+
+IDD_MULTIPLEX DIALOGEX 0, 0, 382, 217
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Multiple Tasks"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Go",IDC_GO,7,178,183,28
+    PUSHBUTTON      "CANCEL",IDCANCEL,325,177,50,27
+    LTEXT           "Number of trials each session:",IDC_STATIC,7,152,95,8
+    LTEXT           "&Multiple values to run in the session (AUX)",IDC_STATIC,7,83,221,8
+    EDITTEXT        IDC_ADDPROC,7,94,350,44,ES_MULTILINE | ES_AUTOHSCROLL
+    LTEXT           "Presenter setting control (separated by CR)",IDC_STATIC,7,7,136,8
+    EDITTEXT        IDC_PRESENT_CONTROL,7,22,351,49,ES_MULTILINE | ES_AUTOHSCROLL
+    EDITTEXT        IDC_NUM_TRIALS,115,149,40,14,ES_AUTOHSCROLL
+    LTEXT           "Total trials:",IDC_STATIC,207,153,35,8
+    LTEXT           "-------",IDC_TOTALTRIALS,258,154,15,8
+END
+
+IDD_PRESENTER_FAIL DIALOG 0, 0, 311, 86
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Presenter Failure -- "
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Retry",IDOK,254,7,50,35
+    PUSHBUTTON      "Abort",IDCANCEL,254,61,50,18
+    EDITTEXT        IDC_MSG,7,7,234,34,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Presenter Node:",IDC_STATIC,9,47,52,8
+    COMBOBOX        IDC_NODELIST,7,58,73,52,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Presenter setting msg:",IDC_STATIC,90,47,70,8
+    EDITTEXT        IDC_PRESENT_CONTROL,88,58,156,14,ES_AUTOHSCROLL
+END
+
+IDD_SETTINGS DIALOGEX 0, 0, 256, 161
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Settings"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,133,7,60,20
+    PUSHBUTTON      "Cancel",IDCANCEL,200,7,41,14
+    LTEXT           "Sampling Rate",-1,7,16,48,10
+    EDITTEXT        IDC_FS,57,14,40,13,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Hz",-1,99,16,13,10
+    LTEXT           "Paths for User-Defined Functions (separated by semicolons)",-1,7,38,47,40
+    EDITTEXT        IDC_UDFPATH,55,38,191,41,ES_MULTILINE
+    GROUPBOX        "Log Reporting",-1,7,89,240,62
+    EDITTEXT        IDC_EMAIL_ADDRESS,81,100,153,13,ES_AUTOHSCROLL
+    CONTROL         "E-Mail",IDC_LOG_EMAIL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,102,35,10
+    CONTROL         "FTP",IDC_LOG_FTP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,120,29,10
+    LTEXT           "Address",-1,53,102,26,8
+    EDITTEXT        IDC_FTP_ADDRESS,81,118,153,13,ES_AUTOHSCROLL
+    LTEXT           "Address",-1,53,120,26,8
+    EDITTEXT        IDC_FTP_ID,81,132,55,13,ES_AUTOHSCROLL
+    LTEXT           "ID",-1,71,135,8,8
+    EDITTEXT        IDC_FTP_PASSWORD,179,132,55,13,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Password",-1,145,135,32,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "Wendy.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open Session",               IDM_FILE_OPENSESSION
+        MENUITEM "&Save Session",               IDM_FILE_SAVESESSION
+        MENUITEM "Se&ttings",                   IDM_FILE_SETTINGS
+        MENUITEM "E&xit",                       IDM_FILE_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Msg with Presenter (F9)",    ID_MENUITEM40005
+        MENUITEM "&Batch (F2)",                 IDM_BATCH
+        MENUITEM "Multiple &Tasks",             IDM_MULTIPLEX
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Echo (F1)",             ID_HELP_ECHO
+        MENUITEM SEPARATOR
+        MENUITEM "&About Echo",                 ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR1 ACCELERATORS
+BEGIN
+    "O",            IDC_OPEN_SESSION,       VIRTKEY, CONTROL, NOINVERT
+    "Q",            IDM_FILE_EXIT,          VIRTKEY, ALT, NOINVERT
+    VK_F1,          ID_HELP_ECHO,           VIRTKEY, NOINVERT
+    VK_F2,          IDM_BATCH,              VIRTKEY, NOINVERT
+    VK_F9,          ID_MENUITEM40005,       VIRTKEY, NOINVERT
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,5,4,0
+ PRODUCTVERSION 2,5,4,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Auditory Professional"
+            VALUE "FileDescription", "Echo"
+            VALUE "FileVersion", "2, 5, 4, 0"
+            VALUE "InternalName", "Echo"
+            VALUE "LegalCopyright", "Copyright (C) 2009"
+            VALUE "OriginalFilename", "Echo"
+            VALUE "ProductName", " Echo"
+            VALUE "ProductVersion", "2, 5, 4, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 254
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 160
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 24
+//
+
+IDR_241                 24                      "manifestXP.xml"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_TOKEN1              "b"
+    IDS_TOKEN2              "p"
+    IDS_TOKEN3              "d"
+    IDS_TOKEN4              "t"
+    IDS_TOKEN5              "g"
+    IDS_TOKEN6              "k"
+    IDS_TOKEN7              "m"
+    IDS_TOKEN8              "n"
+    IDS_TOKEN9              "v"
+    IDS_TOKEN10             "f"
+    IDS_TOKEN11             "z"
+    IDS_TOKEN12             "s"
+    IDS_TOKEN13             "dh (they)"
+    IDS_TOKEN14             "th (three)"
+    IDS_TOKEN15             "zh (azure)"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TOKEN16             "sh (she)"
+    IDS_TOKEN17             "j (jam)"
+    IDS_TOKEN18             "ch (cheek)"
+    IDS_TOKEN19             "w"
+    IDS_TOKEN20             "y"
+    IDS_TOKEN21             "l"
+    IDS_TOKEN22             "r"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_APPLICATION_ID      "SpeechTesting"
+    IDS_SUBJ_INST1          "Press 'start' to begin the session."
+    IDS_SUBJ_INST2          "Listen to the next sound."
+    IDS_SUBJ_INST3          "Press the button of the sound you heard."
+    IDS_SUBJ_INST4          "Session complete. Wait for the next one."
+    IDS_SUBJ_INST5          "Press a button then it will play the sound. (if done, press 'done')"
+    IDS_SUBJ_INST6          "Playing the sound sample."
+    IDS_HELPSTRING          "Define all the variables and processing and the last line should be a single expression."
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

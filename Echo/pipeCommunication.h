@@ -1,0 +1,4 @@
+#define WM__PIPE   WM_USER+300
+
+#define CONNECTION_RECEIVED			1L
+#define PRENSENTER_ID				2L

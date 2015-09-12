@@ -1,0 +1,20 @@
+function [elevel,detail]=ehist(q)
+detail = getStat(q);
+elevel = zeros(size(detail,1),1);
+
+for i=1:length(elevel)
+    elevel(i) = detail(i,5)*detail(i,2)/;
+end
+
+function out=getStat(q)
+out = [];
+for i=22:-1:1
+    ids = find(q.electrodes==i);
+    if ~isempty(ids)
+        counts(i) = length(ids);
+        meancl(i) = mean(q.current_levels(ids));
+        mini(i) = min(q.current_levels(ids));
+        maxi(i) = max(q.current_levels(ids));
+        out = [out; i counts(i) mini(i) maxi(i) meancl(i)];
+    end
+end

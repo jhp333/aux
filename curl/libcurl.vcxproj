@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <RootNamespace>curl</RootNamespace>
+    <ProjectName>libcurl</ProjectName>
+    <ProjectGuid>{87EE9DA4-DE1E-4448-8324-183C98DCA588}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+    <Import Project="C:\devploy\droppath1.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+    <Import Project="C:\devploy\droppath1.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/libcurl.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.;.\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeaderOutputFile>.\Release/libcurl.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release/libcurl.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/libcurl.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;.\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;BUILDING_LIBCURL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>.\Debug/libcurl.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug/libcurl.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="$(SrcPath)amigaos.c" />
+    <ClCompile Include="$(SrcPath)asyn-ares.c" />
+    <ClCompile Include="$(SrcPath)asyn-thread.c" />
+    <ClCompile Include="$(SrcPath)base64.c" />
+    <ClCompile Include="$(SrcPath)bundles.c" />
+    <ClCompile Include="$(SrcPath)conncache.c" />
+    <ClCompile Include="$(SrcPath)connect.c" />
+    <ClCompile Include="$(SrcPath)content_encoding.c" />
+    <ClCompile Include="$(SrcPath)cookie.c" />
+    <ClCompile Include="$(SrcPath)curl_addrinfo.c" />
+    <ClCompile Include="$(SrcPath)curl_fnmatch.c" />
+    <ClCompile Include="$(SrcPath)curl_gethostname.c" />
+    <ClCompile Include="$(SrcPath)curl_gssapi.c" />
+    <ClCompile Include="$(SrcPath)curl_memrchr.c" />
+    <ClCompile Include="$(SrcPath)curl_multibyte.c" />
+    <ClCompile Include="$(SrcPath)curl_ntlm.c" />
+    <ClCompile Include="$(SrcPath)curl_ntlm_core.c" />
+    <ClCompile Include="$(SrcPath)curl_ntlm_msgs.c" />
+    <ClCompile Include="$(SrcPath)curl_ntlm_wb.c" />
+    <ClCompile Include="$(SrcPath)curl_rtmp.c" />
+    <ClCompile Include="$(SrcPath)curl_sasl.c" />
+    <ClCompile Include="$(SrcPath)curl_sspi.c" />
+    <ClCompile Include="$(SrcPath)curl_threads.c" />
+    <ClCompile Include="$(SrcPath)dict.c" />
+    <ClCompile Include="$(SrcPath)dotdot.c" />
+    <ClCompile Include="$(SrcPath)easy.c" />
+    <ClCompile Include="$(SrcPath)escape.c" />
+    <ClCompile Include="$(SrcPath)file.c" />
+    <ClCompile Include="$(SrcPath)fileinfo.c" />
+    <ClCompile Include="$(SrcPath)formdata.c" />
+    <ClCompile Include="$(SrcPath)ftp.c" />
+    <ClCompile Include="$(SrcPath)ftplistparser.c" />
+    <ClCompile Include="$(SrcPath)getenv.c" />
+    <ClCompile Include="$(SrcPath)getinfo.c" />
+    <ClCompile Include="$(SrcPath)gopher.c" />
+    <ClCompile Include="$(SrcPath)hash.c" />
+    <ClCompile Include="$(SrcPath)hmac.c" />
+    <ClCompile Include="$(SrcPath)hostasyn.c" />
+    <ClCompile Include="$(SrcPath)hostcheck.c" />
+    <ClCompile Include="$(SrcPath)hostip4.c" />
+    <ClCompile Include="$(SrcPath)hostip6.c" />
+    <ClCompile Include="$(SrcPath)hostip.c" />
+    <ClCompile Include="$(SrcPath)hostsyn.c" />
+    <ClCompile Include="$(SrcPath)http2.c" />
+    <ClCompile Include="$(SrcPath)http.c" />
+    <ClCompile Include="$(SrcPath)http_chunks.c" />
+    <ClCompile Include="$(SrcPath)http_digest.c" />
+    <ClCompile Include="$(SrcPath)http_negotiate.c" />
+    <ClCompile Include="$(SrcPath)http_negotiate_sspi.c" />
+    <ClCompile Include="$(SrcPath)http_proxy.c" />
+    <ClCompile Include="$(SrcPath)idn_win32.c" />
+    <ClCompile Include="$(SrcPath)if2ip.c" />
+    <ClCompile Include="$(SrcPath)imap.c" />
+    <ClCompile Include="$(SrcPath)inet_ntop.c" />
+    <ClCompile Include="$(SrcPath)inet_pton.c" />
+    <ClCompile Include="$(SrcPath)krb5.c" />
+    <ClCompile Include="$(SrcPath)ldap.c" />
+    <ClCompile Include="$(SrcPath)llist.c" />
+    <ClCompile Include="$(SrcPath)md4.c" />
+    <ClCompile Include="$(SrcPath)md5.c" />
+    <ClCompile Include="$(SrcPath)memdebug.c" />
+    <ClCompile Include="$(SrcPath)mprintf.c" />
+    <ClCompile Include="$(SrcPath)multi.c" />
+    <ClCompile Include="$(SrcPath)netrc.c" />
+    <ClCompile Include="$(SrcPath)non-ascii.c" />
+    <ClCompile Include="$(SrcPath)nonblock.c" />
+    <ClCompile Include="$(SrcPath)openldap.c" />
+    <ClCompile Include="$(SrcPath)parsedate.c" />
+    <ClCompile Include="$(SrcPath)pingpong.c" />
+    <ClCompile Include="$(SrcPath)pipeline.c" />
+    <ClCompile Include="$(SrcPath)pop3.c" />
+    <ClCompile Include="$(SrcPath)progress.c" />
+    <ClCompile Include="$(SrcPath)rawstr.c" />
+    <ClCompile Include="$(SrcPath)rtsp.c" />
+    <ClCompile Include="$(SrcPath)security.c" />
+    <ClCompile Include="$(SrcPath)select.c" />
+    <ClCompile Include="$(SrcPath)sendf.c" />
+    <ClCompile Include="$(SrcPath)share.c" />
+    <ClCompile Include="$(SrcPath)slist.c" />
+    <ClCompile Include="$(SrcPath)smtp.c" />
+    <ClCompile Include="$(SrcPath)socks.c" />
+    <ClCompile Include="$(SrcPath)socks_gssapi.c" />
+    <ClCompile Include="$(SrcPath)socks_sspi.c" />
+    <ClCompile Include="$(SrcPath)speedcheck.c" />
+    <ClCompile Include="$(SrcPath)splay.c" />
+    <ClCompile Include="$(SrcPath)ssh.c" />
+    <ClCompile Include="$(SrcPath)strdup.c" />
+    <ClCompile Include="$(SrcPath)strequal.c" />
+    <ClCompile Include="$(SrcPath)strerror.c" />
+    <ClCompile Include="$(SrcPath)strtok.c" />
+    <ClCompile Include="$(SrcPath)strtoofft.c" />
+    <ClCompile Include="$(SrcPath)telnet.c" />
+    <ClCompile Include="$(SrcPath)tftp.c" />
+    <ClCompile Include="$(SrcPath)timeval.c" />
+    <ClCompile Include="$(SrcPath)transfer.c" />
+    <ClCompile Include="$(SrcPath)url.c" />
+    <ClCompile Include="$(SrcPath)version.c" />
+    <ClCompile Include="$(SrcPath)vtls\axtls.c" />
+    <ClCompile Include="$(SrcPath)vtls\curl_darwinssl.c" />
+    <ClCompile Include="$(SrcPath)vtls\curl_schannel.c" />
+    <ClCompile Include="$(SrcPath)vtls\cyassl.c" />
+    <ClCompile Include="$(SrcPath)vtls\gskit.c" />
+    <ClCompile Include="$(SrcPath)vtls\gtls.c" />
+    <ClCompile Include="$(SrcPath)vtls\nss.c" />
+    <ClCompile Include="$(SrcPath)vtls\openssl.c" />
+    <ClCompile Include="$(SrcPath)vtls\polarssl.c" />
+    <ClCompile Include="$(SrcPath)vtls\polarssl_threadlock.c" />
+    <ClCompile Include="$(SrcPath)vtls\qssl.c" />
+    <ClCompile Include="$(SrcPath)vtls\vtls.c" />
+    <ClCompile Include="$(SrcPath)warnless.c" />
+    <ClCompile Include="$(SrcPath)wildcard.c" />
+    <ClCompile Include="$(SrcPath)x509asn1.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(SrcPath)amigaos.h" />
+    <ClInclude Include="$(SrcPath)arpa_telnet.h" />
+    <ClInclude Include="$(SrcPath)asyn.h" />
+    <ClInclude Include="$(SrcPath)bundles.h" />
+    <ClInclude Include="$(SrcPath)config-win32.h" />
+    <ClInclude Include="$(SrcPath)conncache.h" />
+    <ClInclude Include="$(SrcPath)connect.h" />
+    <ClInclude Include="$(SrcPath)content_encoding.h" />
+    <ClInclude Include="$(SrcPath)cookie.h" />
+    <ClInclude Include="$(SrcPath)curl_addrinfo.h" />
+    <ClInclude Include="$(SrcPath)curl_base64.h" />
+    <ClInclude Include="$(SrcPath)curl_fnmatch.h" />
+    <ClInclude Include="$(SrcPath)curl_gethostname.h" />
+    <ClInclude Include="$(SrcPath)curl_gssapi.h" />
+    <ClInclude Include="$(SrcPath)curl_hmac.h" />
+    <ClInclude Include="$(SrcPath)curl_ldap.h" />
+    <ClInclude Include="$(SrcPath)curl_md4.h" />
+    <ClInclude Include="$(SrcPath)curl_md5.h" />
+    <ClInclude Include="$(SrcPath)curl_memory.h" />
+    <ClInclude Include="$(SrcPath)curl_memrchr.h" />
+    <ClInclude Include="$(SrcPath)curl_multibyte.h" />
+    <ClInclude Include="$(SrcPath)curl_ntlm_core.h" />
+    <ClInclude Include="$(SrcPath)curl_ntlm.h" />
+    <ClInclude Include="$(SrcPath)curl_ntlm_msgs.h" />
+    <ClInclude Include="$(SrcPath)curl_ntlm_wb.h" />
+    <ClInclude Include="$(SrcPath)curl_rtmp.h" />
+    <ClInclude Include="$(SrcPath)curl_sasl.h" />
+    <ClInclude Include="$(SrcPath)curl_sec.h" />
+    <ClInclude Include="$(SrcPath)curl_setup.h" />
+    <ClInclude Include="$(SrcPath)curl_setup_once.h" />
+    <ClInclude Include="$(SrcPath)curl_sspi.h" />
+    <ClInclude Include="$(SrcPath)curl_threads.h" />
+    <ClInclude Include="$(SrcPath)curlx.h" />
+    <ClInclude Include="$(SrcPath)dict.h" />
+    <ClInclude Include="$(SrcPath)dotdot.h" />
+    <ClInclude Include="$(SrcPath)easyif.h" />
+    <ClInclude Include="$(SrcPath)escape.h" />
+    <ClInclude Include="$(SrcPath)file.h" />
+    <ClInclude Include="$(SrcPath)fileinfo.h" />
+    <ClInclude Include="$(SrcPath)formdata.h" />
+    <ClInclude Include="$(SrcPath)ftp.h" />
+    <ClInclude Include="$(SrcPath)ftplistparser.h" />
+    <ClInclude Include="$(SrcPath)getinfo.h" />
+    <ClInclude Include="$(SrcPath)gopher.h" />
+    <ClInclude Include="$(SrcPath)hash.h" />
+    <ClInclude Include="$(SrcPath)hostcheck.h" />
+    <ClInclude Include="$(SrcPath)hostip.h" />
+    <ClInclude Include="$(SrcPath)http2.h" />
+    <ClInclude Include="$(SrcPath)http_chunks.h" />
+    <ClInclude Include="$(SrcPath)http_digest.h" />
+    <ClInclude Include="$(SrcPath)http.h" />
+    <ClInclude Include="$(SrcPath)http_negotiate.h" />
+    <ClInclude Include="$(SrcPath)http_proxy.h" />
+    <ClInclude Include="$(SrcPath)if2ip.h" />
+    <ClInclude Include="$(SrcPath)imap.h" />
+    <ClInclude Include="$(SrcPath)inet_ntop.h" />
+    <ClInclude Include="$(SrcPath)inet_pton.h" />
+    <ClInclude Include="$(SrcPath)llist.h" />
+    <ClInclude Include="$(SrcPath)memdebug.h" />
+    <ClInclude Include="$(SrcPath)multihandle.h" />
+    <ClInclude Include="$(SrcPath)multiif.h" />
+    <ClInclude Include="$(SrcPath)netrc.h" />
+    <ClInclude Include="$(SrcPath)non-ascii.h" />
+    <ClInclude Include="$(SrcPath)nonblock.h" />
+    <ClInclude Include="$(SrcPath)parsedate.h" />
+    <ClInclude Include="$(SrcPath)pingpong.h" />
+    <ClInclude Include="$(SrcPath)pipeline.h" />
+    <ClInclude Include="$(SrcPath)pop3.h" />
+    <ClInclude Include="$(SrcPath)progress.h" />
+    <ClInclude Include="$(SrcPath)rawstr.h" />
+    <ClInclude Include="$(SrcPath)rtsp.h" />
+    <ClInclude Include="$(SrcPath)select.h" />
+    <ClInclude Include="$(SrcPath)sendf.h" />
+    <ClInclude Include="$(SrcPath)setup-vms.h" />
+    <ClInclude Include="$(SrcPath)share.h" />
+    <ClInclude Include="$(SrcPath)sigpipe.h" />
+    <ClInclude Include="$(SrcPath)slist.h" />
+    <ClInclude Include="$(SrcPath)smtp.h" />
+    <ClInclude Include="$(SrcPath)sockaddr.h" />
+    <ClInclude Include="$(SrcPath)socks.h" />
+    <ClInclude Include="$(SrcPath)speedcheck.h" />
+    <ClInclude Include="$(SrcPath)splay.h" />
+    <ClInclude Include="$(SrcPath)ssh.h" />
+    <ClInclude Include="$(SrcPath)strdup.h" />
+    <ClInclude Include="$(SrcPath)strequal.h" />
+    <ClInclude Include="$(SrcPath)strerror.h" />
+    <ClInclude Include="$(SrcPath)strtok.h" />
+    <ClInclude Include="$(SrcPath)strtoofft.h" />
+    <ClInclude Include="$(SrcPath)telnet.h" />
+    <ClInclude Include="$(SrcPath)tftp.h" />
+    <ClInclude Include="$(SrcPath)timeval.h" />
+    <ClInclude Include="$(SrcPath)transfer.h" />
+    <ClInclude Include="$(SrcPath)urldata.h" />
+    <ClInclude Include="$(SrcPath)url.h" />
+    <ClInclude Include="$(SrcPath)vtls\axtls.h" />
+    <ClInclude Include="$(SrcPath)vtls\curl_darwinssl.h" />
+    <ClInclude Include="$(SrcPath)vtls\curl_schannel.h" />
+    <ClInclude Include="$(SrcPath)vtls\cyassl.h" />
+    <ClInclude Include="$(SrcPath)vtls\gskit.h" />
+    <ClInclude Include="$(SrcPath)vtls\gtls.h" />
+    <ClInclude Include="$(SrcPath)vtls\nssg.h" />
+    <ClInclude Include="$(SrcPath)vtls\openssl.h" />
+    <ClInclude Include="$(SrcPath)vtls\polarssl.h" />
+    <ClInclude Include="$(SrcPath)vtls\polarssl_threadlock.h" />
+    <ClInclude Include="$(SrcPath)vtls\qssl.h" />
+    <ClInclude Include="$(SrcPath)vtls\vtls.h" />
+    <ClInclude Include="$(SrcPath)warnless.h" />
+    <ClInclude Include="$(SrcPath)wildcard.h" />
+    <ClInclude Include="$(SrcPath)x509asn1.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="$(SrcPath)libcurl.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

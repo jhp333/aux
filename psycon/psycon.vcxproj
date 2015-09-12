@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8AD31825-0C89-408A-88C7-40EC2F62AEC2}</ProjectGuid>
+    <RootNamespace>psycon</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\droppath.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\droppath.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winmm.lib;sigproc.lib;graphy.lib;flyplus.lib;libcurl.lib;precontlib0_6.lib</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>winmm.lib;sigproc.lib;graphy.lib;flyplus.lib;libcurl.lib;precontlib0_6.lib</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\psynteg.ico" />
+    <None Include="res\psycon.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(SrcPath)psycon.h" />
+    <ClInclude Include="$(SrcPath)psyconDlg.h" />
+    <ClInclude Include="$(SrcPath)Resource.h" />
+    <ClInclude Include="$(SrcPath)stdafx.h" />
+    <ClInclude Include="$(SrcPath)targetver.h" />
+    <ClInclude Include="$(SrcPath)Adaptive.h" />
+    <ClInclude Include="$(SrcPath)AdaptiveDlg.h" />
+    <ClInclude Include="$(SrcPath)Constant_resview.h" />
+    <ClInclude Include="$(SrcPath)ConstantStim.h" />
+    <ClInclude Include="$(SrcPath)CustomScript.h" />
+    <ClInclude Include="$(SrcPath)Edit4Plot.h" />
+    <ClInclude Include="$(SrcPath)FIFO.h" />
+    <ClInclude Include="$(SrcPath)LogReport.h" />
+    <ClInclude Include="$(SrcPath)Request.h" />
+    <ClInclude Include="$(SrcPath)Settings.h" />
+    <ClInclude Include="$(SrcPath)SliderAdj.h" />
+    <ClInclude Include="$(SrcPath)supportFunctions.h" />
+    <ClInclude Include="$(SrcPath)Tabber.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(SrcPath)psycon.cpp" />
+    <ClCompile Include="$(SrcPath)psyconDlg.cpp" />
+    <ClCompile Include="$(SrcPath)stdafx.cpp" />
+    <ClCompile Include="$(SrcPath)Adaptive.cpp" />
+    <ClCompile Include="$(SrcPath)AdaptiveDlg.cpp" />
+    <ClCompile Include="$(SrcPath)Constant_resview.cpp" />
+    <ClCompile Include="$(SrcPath)ConstantStim.cpp" />
+    <ClCompile Include="$(SrcPath)CustomScript.cpp" />
+    <ClCompile Include="$(SrcPath)Edit4Plot.cpp" />
+    <ClCompile Include="$(SrcPath)FIFO.cpp" />
+    <ClCompile Include="$(SrcPath)LogReport.cpp" />
+    <ClCompile Include="$(SrcPath)Request.cpp" />
+    <ClCompile Include="$(SrcPath)Settings.cpp" />
+    <ClCompile Include="$(SrcPath)SliderAdj.cpp" />
+    <ClCompile Include="$(SrcPath)supportFunctions.cpp" />
+    <ClCompile Include="$(SrcPath)Tabber.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="$(SrcPath)psycon.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(SrcPath)calbase.h" />
+    <ClInclude Include="$(SrcPath)cipsycon.tab.h" />
+    <ClInclude Include="$(SrcPath)csignals.h" />
+    <ClInclude Include="$(SrcPath)EqSig.h" />
+    <ClInclude Include="$(SrcPath)msgcrack.h" />
+    <ClInclude Include="$(SrcPath)psycon.tab.h" />
+    <ClInclude Include="$(SrcPath)psycon.yacc.h" />
+    <ClInclude Include="$(SrcPath)resource.h" />
+    <ClInclude Include="$(SrcPath)samplerate.h" />
+    <ClInclude Include="$(SrcPath)sigplus_internal.h" />
+    <ClInclude Include="$(SrcPath)sigproc.h" />
+    <ClInclude Include="$(SrcPath)sigprocdlg.h" />
+    <ClInclude Include="$(SrcPath)StdAfx.h" />
+    <ClInclude Include="$(SrcPath)WndDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(SrcPath)AstSig.cpp" />
+    <ClCompile Include="$(SrcPath)audstr.cpp" />
+    <ClCompile Include="$(SrcPath)AuxFunc.cpp" />
+    <ClCompile Include="$(SrcPath)calbase.cpp" />
+    <ClCompile Include="$(SrcPath)csignals.cpp" />
+    <ClCompile Include="$(SrcPath)CSigProcDlg.cpp" />
+    <ClCompile Include="$(SrcPath)eqsig.cpp" />
+    <ClCompile Include="$(SrcPath)internals.cpp" />
+    <ClCompile Include="$(SrcPath)lineparser.cpp" />
+    <ClCompile Include="$(SrcPath)matOperations.cpp" />
+    <ClCompile Include="$(SrcPath)remez.cpp" />
+    <ClCompile Include="$(SrcPath)sig_wav_misc.cpp" />
+    <ClCompile Include="$(SrcPath)StdAfx.cpp" />
+    <ClCompile Include="$(SrcPath)waves.cpp" />
+    <ClCompile Include="$(SrcPath)WndDlg.cpp" />
+    <ClCompile Include="$(SrcPath)cipsycon.tab.c" />
+    <ClCompile Include="$(SrcPath)cipsycon.yy.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="$(SrcPath)sigproc.rc" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B38652B0-C424-4AD5-87E5-40597550B9F3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>cisigproc2</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\droppath.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\droppath.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>cisigproc</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>cisigproc</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;CISIGPROC2_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>RFFTW2dll.lib;iir.lib;Winmm.lib;audfret.lib;libsamplerate.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;CISIGPROC2_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>RFFTW2dll.lib;iir.lib;Winmm.lib;audfret.lib;libsamplerate.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

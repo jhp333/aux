@@ -1,0 +1,478 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\psycon.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About psycon"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    ICON            128,IDC_STATIC,11,17,20,20
+    LTEXT           "Psycon",IDC_STATIC_PSYCON,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright © 2005 Bomjun Kwon, Ph.D.\nLicensed under the Academic Free License version 3.0",IDC_STATIC,40,25,181,16
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_PSYCON_DIALOG DIALOGEX 0, 0, 385, 324
+STYLE DS_SETFONT | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_WINDOWEDGE | WS_EX_APPWINDOW
+CAPTION "PSYCON"
+FONT 12, "System", 0, 0, 0x1
+BEGIN
+    LTEXT           "Variable Definitions",IDC_STATIC,2,4,180,8
+    EDITTEXT        IDC_SIGNAL_TAG,2,12,259,43,ES_MULTILINE | ES_WANTRETURN | WS_VSCROLL
+    EDITTEXT        IDC_LOG,266,34,112,117,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+    LTEXT           "Msg:",IDC_STATIC,2,292,17,8
+    EDITTEXT        IDC_TALK,19,291,305,12,ES_AUTOHSCROLL
+    LTEXT           "Subject:",IDC_STATIC,266,3,27,8
+    EDITTEXT        IDC_SUBJ,295,2,83,12,ES_AUTOHSCROLL
+    LTEXT           "Max Cal. Level",IDC_STATIC,266,18,50,8
+    EDITTEXT        IDC_MAX_LEVEL,317,16,32,12,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "[dBSPL]",IDC_STATIC,351,18,27,8
+    PUSHBUTTON      "&Go",IDC_GO,176,184,39,28
+    PUSHBUTTON      "S&top",IDC_STOP,177,222,38,29
+    CONTROL         "",IDC_TASKTAB,"SysTabControl32",0x0,2,152,166,114
+    LTEXT           "# of Intervals",IDC_STATIC,2,268,46,9
+    EDITTEXT        IDC_ANCHOR_INT,69,277,47,12,ES_CENTER | ES_AUTOHSCROLL
+    LTEXT           "Anchored Intervals",IDC_STATIC,3,278,64,10
+    EDITTEXT        IDC_NUM_INTERVALS,46,266,19,12,ES_CENTER | ES_AUTOHSCROLL
+    CONTROL         "Feedback",IDC_FEEDBACK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,123,267,50,9
+    LTEXT           "...",IDC_STATIC8,2,92,255,8
+    LTEXT           "...",IDC_STATIC9,2,122,255,8
+    EDITTEXT        IDC_SIGNAL_CON,2,130,259,19,ES_MULTILINE | ES_AUTOVSCROLL
+    EDITTEXT        IDC_SIGNAL_REF,2,102,259,19,ES_MULTILINE | ES_AUTOVSCROLL
+    LTEXT           "Variables per trial",IDC_STATIC,2,57,113,8
+    EDITTEXT        IDC_SIGNAL_TAG2,2,65,259,27,ES_MULTILINE | ES_WANTRETURN | WS_VSCROLL
+END
+
+IDD_SLIDER DIALOGEX 0, 0, 162, 98
+STYLE DS_SETFONT | WS_CHILD
+FONT 12, "System", 400, 0, 0x81
+BEGIN
+    EDITTEXT        IDC_VAL,43,23,40,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Initial Value",IDC_STATIC,14,9,39,8
+    EDITTEXT        IDC_INIT_VAL,56,7,99,12,ES_AUTOHSCROLL
+    LTEXT           "Step size:",IDC_STATIC,14,52,17,8
+    EDITTEXT        IDC_STEP_BIG,34,50,40,12,ES_AUTOHSCROLL
+    LTEXT           "Big",IDC_STATIC,41,41,11,8
+    LTEXT           "Small",IDC_STATIC,91,41,18,8
+    LTEXT           "Current value:",IDC_STATIC,14,25,25,8
+    EDITTEXT        IDC_STEP_SMALL,81,50,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INST,7,79,155,12,ES_CENTER | ES_AUTOHSCROLL
+    LTEXT           "Instruction:",IDC_STATIC,7,70,37,8
+END
+
+IDD_CONSTANT DIALOGEX 0, 0, 162, 86
+STYLE DS_SETFONT | WS_CHILD
+FONT 12, "System", 400, 0, 0x81
+BEGIN
+    LTEXT           "Independent variable / conditions",IDC_STATIC,0,2,111,8
+    EDITTEXT        IDC_IND_VAR_STR,0,12,160,36,ES_CENTER | ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL,WS_EX_STATICEDGE
+    LTEXT           "Count:",IDC_STATIC,123,55,21,8
+    LTEXT           "0",IDC_IND_VAR_COUNT_STATIC,146,55,14,8
+    LTEXT           "Repeat",IDC_STATIC,65,55,25,8
+    EDITTEXT        IDC_TRIALS,92,53,24,12,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_INST,0,71,160,12,ES_CENTER | ES_AUTOHSCROLL
+    LTEXT           "Instruction:",IDC_STATIC,0,62,37,8
+END
+
+IDD_ADAPTIVE DIALOGEX 0, 0, 162, 98
+STYLE DS_SETFONT | WS_CHILD
+FONT 12, "System", 400, 0, 0x81
+BEGIN
+    EDITTEXT        IDC_DOWN,11,2,17,12,ES_CENTER | ES_AUTOHSCROLL
+    LTEXT           "down",IDC_STATIC,29,4,22,8
+    EDITTEXT        IDC_UP,49,2,17,12,ES_CENTER | ES_AUTOHSCROLL
+    LTEXT           "up",IDC_STATIC,67,4,9,8
+    LTEXT           "Initial Value",IDC_STATIC,88,4,38,8
+    EDITTEXT        IDC_INIT_VAL,128,2,25,12,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_STEP1,8,24,23,12,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_REVERSALS1,35,24,16,12,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_STEP2,8,37,23,12,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_REVERSALS2,35,37,16,12,ES_RIGHT | ES_AUTOHSCROLL
+    EDITTEXT        IDC_FINAL_REV_4AVG,112,62,19,12,ES_CENTER | ES_AUTOHSCROLL
+    LTEXT           "Final reversals for thresh. est.",IDC_STATIC,12,64,98,8
+    LTEXT           "Session limited at trial",IDC_STATIC,6,54,74,8
+    EDITTEXT        IDC_TRIAL_LIMIT,81,52,18,12,ES_CENTER | ES_AUTOHSCROLL
+    GROUPBOX        "Direction",IDC_STATIC,100,14,55,32
+    CONTROL         "Ascending",IDC_ASCENDING,"Button",BS_AUTORADIOBUTTON,104,23,48,9
+    CONTROL         "Descending",IDC_DESCENDING,"Button",BS_AUTORADIOBUTTON,104,32,49,10
+    GROUPBOX        "Step sizes (v) / reversals",IDC_STATIC,2,14,91,37
+    LTEXT           "Warning when v reaches or crosses",IDC_WARNING_STATIC,17,74,117,8
+    EDITTEXT        IDC_CROSSING_LIMIT,135,72,18,12,ES_CENTER | ES_AUTOHSCROLL
+    CONTROL         "Factor",IDC_FACTOR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,58,31,30,10
+    EDITTEXT        IDC_INST,34,85,127,12,ES_CENTER | ES_AUTOHSCROLL
+    LTEXT           "Instruction",IDC_STATIC,0,86,34,8
+END
+
+IDD_SETTINGS DIALOGEX 0, 0, 256, 417
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Settings"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,133,7,60,20
+    PUSHBUTTON      "Cancel",IDCANCEL,200,7,41,14
+    LTEXT           "Delay between &intervals",IDC_STATIC,7,33,76,10
+    EDITTEXT        IDC_DELAY_INTERVALS,87,31,29,13,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Delay between &trials",IDC_STATIC,135,34,64,10
+    EDITTEXT        IDC_DELAY_TRIALS,203,31,29,13,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "&Subject Instruction (line1: during presentation, line2: after presentation)",IDC_STATIC,7,88,241,8
+    EDITTEXT        IDC_INST,7,96,240,22,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    GROUPBOX        "Sound Devices",IDC_STATIC,7,139,240,73
+    LTEXT           "Single Play&back",IDC_STATIC,13,154,52,8
+    LTEXT           "Controller Path (. or blank for current PC)",IDC_STATIC,7,234,129,8
+    COMBOBOX        IDC_SINGLEPLAY,78,151,166,44,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_PROCEDURE_PLAY,78,182,166,43,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "S&ave trial-by-trial data",IDC_SAVEDETAIL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,124,86,8
+    LTEXT           "Master Volume",IDC_STATIC,11,198,49,8
+    EDITTEXT        IDC_VOL2,210,196,34,13,ES_RIGHT | ES_AUTOHSCROLL
+    GROUPBOX        "2-point Calibration",IDC_STATIC,7,250,240,96
+    LTEXT           "Volume1",IDC_STATIC,14,288,28,8
+    EDITTEXT        IDC_VOL_CAL1,47,285,51,13,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Volume2",IDC_STATIC,14,301,28,8
+    EDITTEXT        IDC_VOL_CAL2,47,301,51,13,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Cal. Tone Frequency [Hz]",IDC_STATIC,13,262,82,8
+    EDITTEXT        IDC_CALTONE_FREQ,98,260,40,13,ES_RIGHT | ES_AUTOHSCROLL
+    PUSHBUTTON      "Play",IDC_PLAY_STOP,167,257,58,21
+    LTEXT           "Measured Level",IDC_STATIC,127,286,52,8
+    EDITTEXT        IDC_CAL_LEVEL1,182,284,44,13,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "dB",IDC_STATIC,230,286,10,8
+    LTEXT           "Measured Level",IDC_STATIC,127,303,52,8
+    EDITTEXT        IDC_CAL_LEVEL2,182,300,44,13,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "dB",IDC_STATIC,230,303,10,8
+    LTEXT           "Sampling Rate",IDC_STATIC,7,16,48,10
+    EDITTEXT        IDC_FS,57,14,40,13,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Hz",IDC_STATIC,99,16,13,10
+    EDITTEXT        IDC_VOL1,210,166,34,13,ES_RIGHT | ES_AUTOHSCROLL
+    PUSHBUTTON      "Update Calibration",IDC_UPDATE_CAL,79,320,93,20,WS_DISABLED
+    PUSHBUTTON      "copy",IDC_COPY_VOL1,100,286,18,14,WS_DISABLED
+    PUSHBUTTON      "copy",IDC_COPY_VOL2,100,300,18,14,WS_DISABLED
+    LTEXT           "Master Volume",IDC_STATIC,11,169,49,8
+    CONTROL         "",IDC_SLIDER1,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,73,166,109,15
+    CTEXT           "0",IDC_STATIC,64,168,8,8
+    CONTROL         "",IDC_SLIDER2,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,73,194,109,15
+    CTEXT           "0",IDC_STATIC,64,198,8,8
+    LTEXT           "",IDC_MAXVOL_CAPTION1,182,168,23,8
+    LTEXT           "",IDC_MAXVOL_CAPTION2,182,200,23,8
+    LTEXT           "Paths for User-Defined Functions (separated by semicolons)",IDC_STATIC,7,52,239,8
+    EDITTEXT        IDC_UDFPATH,7,61,239,23,ES_MULTILINE
+    LTEXT           "ms",IDC_STATIC,117,33,9,10
+    LTEXT           "ms",IDC_STATIC,233,33,9,10
+    CONTROL         "Use as a &controller",IDC_USE_AS_CONTROLLER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,221,74,8
+    EDITTEXT        IDC_CONTROLLER_NODE,139,232,106,13,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Procedure Playback",IDC_STATIC,14,184,64,8
+    GROUPBOX        "Log Reporting",IDC_STATIC,7,349,240,62
+    EDITTEXT        IDC_EMAIL_ADDRESS,81,360,153,13,ES_AUTOHSCROLL
+    CONTROL         "E-Mail",IDC_LOG_EMAIL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,362,35,10
+    CONTROL         "FTP",IDC_LOG_FTP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,380,29,10
+    LTEXT           "Address",IDC_STATIC,53,362,26,8
+    EDITTEXT        IDC_FTP_ADDRESS,81,378,153,13,ES_AUTOHSCROLL
+    LTEXT           "Address",IDC_STATIC,53,380,26,8
+    EDITTEXT        IDC_FTP_ID,81,392,55,13,ES_AUTOHSCROLL
+    LTEXT           "ID",IDC_STATIC,71,395,8,8
+    EDITTEXT        IDC_FTP_PASSWORD,179,392,55,13,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Password",IDC_STATIC,145,395,32,8
+    LTEXT           "Level",IDC_STATIC,169,220,20,8
+    EDITTEXT        IDC_CONTROLLER_LEVEL,193,218,25,13,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "dB rms",IDC_STATIC,220,221,24,8
+END
+
+IDD_REMOTE_HOSTS DIALOG  0, 0, 155, 185
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Searching for Remote PC"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_HOST_LIST,7,17,141,86,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Remove Selection",IDC_REMOVE_HOST,7,110,80,14
+    LTEXT           "&New:",IDC_STATIC,13,135,18,8
+    EDITTEXT        IDC_NEWHOST,41,132,101,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Add New Connection",IDC_ADD_HOST,7,147,76,14
+    PUSHBUTTON      "Cancel",IDC_CANCEL,7,164,141,14
+    LTEXT           "Remote PCs:",IDC_STATIC,7,7,42,8
+END
+
+IDD_LICENSE DIALOGEX 0, 0, 278, 63
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "License Authentication"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Internet connection is required to acquire the license.",IDC_STATIC,7,7,196,10
+    LTEXT           "Lincense Code",IDC_STATIC,9,28,108,8
+    EDITTEXT        IDC_CODE,7,36,186,12,ES_AUTOHSCROLL
+    LTEXT           "(This needs to be done only once.)",IDC_STATIC,15,15,196,10
+    DEFPUSHBUTTON   "Check License",IDC_CHECK,198,29,73,24
+END
+
+IDD_CONSTANT_LOG DIALOGEX 0, 0, 148, 187
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "psychometric function"
+FONT 10, "System", 700, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_RESULT_LOG,7,7,134,173,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_CUSTOM DIALOGEX 0, 0, 162, 101
+STYLE DS_SETFONT | WS_CHILD
+FONT 12, "System", 400, 0, 0x81
+BEGIN
+    EDITTEXT        IDC_CUSTOM_SCRIPT,0,0,161,86,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL,WS_EX_STATICEDGE
+    PUSHBUTTON      "External Editor",IDC_EXT_EDITOR,1,87,60,13
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,1,8,0
+ PRODUCTVERSION 2,1,8,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "single interval + speech testing in adaptive procedure"
+            VALUE "CompanyName", "Auditory Professional, Inc."
+            VALUE "FileVersion", "2, 1, 8, 0"
+            VALUE "InternalName", "psycon"
+            VALUE "LegalCopyright", "Copyright (C) 2005"
+            VALUE "OriginalFilename", "psycon.EXE"
+            VALUE "ProductName", "psycon Application"
+            VALUE "ProductVersion", "2, 1, 8, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_PSYCON_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 378
+        BOTTOMMARGIN, 317
+    END
+
+    IDD_SLIDER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_CONSTANT, DIALOG
+    BEGIN
+        RIGHTMARGIN, 160
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_ADAPTIVE, DIALOG
+    BEGIN
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 97
+    END
+
+    IDD_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 254
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 416
+    END
+
+    IDD_REMOTE_HOSTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 148
+        BOTTOMMARGIN, 178
+    END
+
+    IDD_LICENSE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 271
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 60
+    END
+
+    IDD_CONSTANT_LOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 180
+    END
+
+    IDD_CUSTOM, DIALOG
+    BEGIN
+        RIGHTMARGIN, 161
+        BOTTOMMARGIN, 100
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Open Stim",                   IDM_FILE_OPENSTIM
+        MENUITEM "Save Stim",                   IDM_FILE_SAVESTIM
+        MENUITEM "&Settings",                   IDM_FILE_SETTINGS
+        MENUITEM "E&xit",                       IDM_FILE_EXIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&What's new",                 IDM_HELP_WHATSNEW
+        MENUITEM "&About",                      IDM_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_PSYCON              ICON                    "res\\psynteg.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About psycon..."
+    IDS_STRING103           "[REF] Standard/Reference Interval"
+    IDS_STRING104           "Odd-ball/Adjustable Interval"
+    IDS_STRING105           "Trial-by-trial Record"
+    IDS_STRING106           "Signal to adjust"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\psycon.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

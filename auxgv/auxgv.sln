@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "auxgv", "auxgv.vcproj", "{690BEAB4-BED4-44E1-8829-A7F9567426EA}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "auxviewer", "auxviewer\auxviewer.vdproj", "{D5B8B895-A588-4360-BBE9-55434839390E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{690BEAB4-BED4-44E1-8829-A7F9567426EA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{690BEAB4-BED4-44E1-8829-A7F9567426EA}.Debug|Win32.Build.0 = Debug|Win32
+		{690BEAB4-BED4-44E1-8829-A7F9567426EA}.Release|Win32.ActiveCfg = Release|Win32
+		{690BEAB4-BED4-44E1-8829-A7F9567426EA}.Release|Win32.Build.0 = Release|Win32
+		{D5B8B895-A588-4360-BBE9-55434839390E}.Debug|Win32.ActiveCfg = Debug
+		{D5B8B895-A588-4360-BBE9-55434839390E}.Release|Win32.ActiveCfg = Release
+		{D5B8B895-A588-4360-BBE9-55434839390E}.Release|Win32.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

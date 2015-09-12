@@ -1,0 +1,13 @@
+char * append_path_file (char *out, const char *path, const char * file);
+int mod (int big, int divider);
+int randin(int limit);
+void permute(int *out, int length);
+void permute(int *presOrder, unsigned char *out1, unsigned char *out2, int nConc, int length);
+int randperm (int *out, int length, int range);
+int _mod (int big, int divider);
+void bubbleSort(int numbers[], int array_size);
+int CountSameElements(int *x, int *y, int len);
+int findstr(int *foundIndices, char *source, char *token);
+int find(int* array, int len, int findee);
+int findWhere (int* array, int len, int findee);
+int readINI2string (char* errstr, const char *fname, const char *heading, string &outString);

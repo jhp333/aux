@@ -1,0 +1,291 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Korean resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ACE_PLAYER DIALOGEX 0, 0, 699, 430
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "ACE player"
+MENU IDR_MENU1
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "Play List",IDC_STATIC,259,7,27,8
+    PUSHBUTTON      "&Browse and Add",IDC_OPEN_WAVE,259,19,64,14
+    PUSHBUTTON      "&Remove",IDC_REMOVE,332,19,37,14
+    LISTBOX         IDC_WAVE_LIST,258,34,182,201,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "AUX Processing",IDC_STATIC,259,294,50,8
+    EDITTEXT        IDC_ATTEN_A,309,270,38,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_ATTEN_B,349,270,38,14,ES_CENTER | ES_AUTOHSCROLL
+    LTEXT           "Attenuation in CL",IDC_STATIC,321,288,56,8
+    PUSHBUTTON      "MAP &A",IDC_MAPA,261,270,40,16
+    PUSHBUTTON      "MAP &B",IDC_MAPB,397,270,40,16
+    CONTROL         "Acoustic &Playback",IDC_ACOUSTIC_PLAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,259,255,73,10
+    PUSHBUTTON      "&Close MAP B",IDC_CLOSE_B,391,20,47,13
+    EDITTEXT        IDC_AUX,257,303,182,107,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    PUSHBUTTON      "&Swap A/B",IDC_SWAP_AB,391,7,47,13
+    EDITTEXT        IDC_LEVEL,299,239,28,12,ES_CENTER | ES_AUTOHSCROLL,WS_EX_CLIENTEDGE
+    LTEXT           "Level Calib",IDC_STATIC,259,241,38,8
+    LTEXT           "dBSPL",IDC_STATIC,329,241,23,8
+    CONTROL         "By Signal RMS ",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,356,239,62,8
+    CONTROL         "By Full Digital Level",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,356,247,77,8
+END
+
+IDD_SET_PROCESSOR DIALOGEX 0, 0, 208, 129
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Implant / Processor"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "SPrint",IDC_SPRINT,"Button",BS_AUTORADIOBUTTON | WS_GROUP,16,22,35,10
+    CONTROL         "L34",IDC_L34,"Button",BS_AUTORADIOBUTTON,16,42,27,10
+    GROUPBOX        "Processor",IDC_PROCESSOR_GRP,7,7,48,57
+    DEFPUSHBUTTON   "SAVE",IDCLOSE,151,108,50,14
+    CONTROL         "CIC3 (N24)",IDC_CIC3,"Button",BS_AUTORADIOBUTTON | WS_GROUP,72,22,52,10
+    CONTROL         "CIC4 (RE)",IDC_CIC4,"Button",BS_AUTORADIOBUTTON,72,42,48,10
+    GROUPBOX        "Implant",IDC_IMPLANT_GRP,63,7,59,57
+    CONTROL         "Emulation Mode",IDC_EMUL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,135,42,66,10
+    EDITTEXT        IDC_NICPATH,7,84,194,13,ES_AUTOHSCROLL
+    LTEXT           "NIC path",IDC_STATIC,7,74,35,8
+END
+
+IDD_SMALL DIALOGEX 0, 0, 305, 71
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Static",IDC_STATIC_DIRECTION,7,7,226,8
+    DEFPUSHBUTTON   "OK",IDOK,248,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,248,24,50,14
+    EDITTEXT        IDC_EDIT_GET,7,44,291,14,ES_AUTOHSCROLL
+END
+
+IDD_PIPEMSG DIALOGEX 500, 0, 324, 194
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Pipe Communication"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_MSG,1,1,316,186,ES_MULTILINE | ES_READONLY | ES_WANTRETURN | WS_VSCROLL
+END
+
+IDD_PULSEVIEW DIALOGEX 0, 0, 168, 243
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Pulse View"
+FONT 10, "System", 700, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_PULSTAT,0,16,165,227,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+    LTEXT           "E",IDC_STATIC,3,5,8,8
+    LTEXT           "#Pulses",IDC_STATIC,28,5,28,8
+    LTEXT           "Min",IDC_STATIC,65,5,17,8
+    LTEXT           "Max",IDC_STATIC,94,5,19,8
+    LTEXT           "Mean",IDC_STATIC,122,5,28,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ACE_PLAYER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 692
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 428
+    END
+
+    IDD_SET_PROCESSOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 201
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_SMALL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 298
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 65
+    END
+
+    IDD_PIPEMSG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 317
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_PULSEVIEW, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 183
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,9,2,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x0L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "SET command includes MATCOM A/B and AUX"
+            VALUE "FileDescription", "aceplayer"
+            VALUE "FileVersion", "1, 9, 2, 0"
+            VALUE "InternalName", "aceplayer"
+            VALUE "LegalCopyright", "Copyright (C) 2012"
+            VALUE "OriginalFilename", "aceplayer"
+            VALUE "ProductName", " aceplayer"
+            VALUE "ProductVersion", "1, 0, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Open MAP &A",                 ID_FILE_OPENMAPA
+        MENUITEM "Close MAP A",                 ID_FILE_CLOSEMAPA
+        MENUITEM "Open MAP &B",                 ID_FILE_OPENMAPB
+        MENUITEM "Close MAP B",                 ID_FILE_CLOSEMAPB
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Pipe",                       ID_VIEW_PIPE
+        MENUITEM "Pulse &Stat",                 ID_VIEW_PULSESTAT
+        MENUITEM "&MATLAB messages",            ID_VIEW_MATLABMESSAGES
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "..\\ace.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_STREAM_FNAME        "qstream.quf"
+    IDS_STREAM_FNAME2       "qstream.xml"
+    IDS_INSTR_NICSTREAMPATH "Type in the full path of NICstream directory"
+    IDS_INSTR_NIC2          "Type in the full path of NIC2 directory"
+    IDS_NIC2_DLL1           "2\\nic.dll"
+    IDS_NIC2_DLL2           "services.dll"
+    IDS_NICSTREAM_DLL       "stream.dll"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

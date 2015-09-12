@@ -1,0 +1,2 @@
+LIBRARY mexGaussianSubsample 
+EXPORTS mexFunction 

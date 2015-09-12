@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Echo", "Echo.vcproj", "{4BE7D98F-37BE-463E-8214-956411622D32}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "echotouch", "echotouch\echotouch.vcproj", "{4F73D5E5-F73B-4200-85E3-85BAEEC8F3A7}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "EchoSetup", "EchoSetup\EchoSetup.vdproj", "{BD002E8D-3A5E-4A6E-88EB-E57EAECD4291}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BE7D98F-37BE-463E-8214-956411622D32}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4BE7D98F-37BE-463E-8214-956411622D32}.Debug|Win32.Build.0 = Debug|Win32
+		{4BE7D98F-37BE-463E-8214-956411622D32}.Release|Win32.ActiveCfg = Release|Win32
+		{4BE7D98F-37BE-463E-8214-956411622D32}.Release|Win32.Build.0 = Release|Win32
+		{4F73D5E5-F73B-4200-85E3-85BAEEC8F3A7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4F73D5E5-F73B-4200-85E3-85BAEEC8F3A7}.Debug|Win32.Build.0 = Debug|Win32
+		{4F73D5E5-F73B-4200-85E3-85BAEEC8F3A7}.Release|Win32.ActiveCfg = Release|Win32
+		{4F73D5E5-F73B-4200-85E3-85BAEEC8F3A7}.Release|Win32.Build.0 = Release|Win32
+		{BD002E8D-3A5E-4A6E-88EB-E57EAECD4291}.Debug|Win32.ActiveCfg = Release
+		{BD002E8D-3A5E-4A6E-88EB-E57EAECD4291}.Release|Win32.ActiveCfg = Release
+		{BD002E8D-3A5E-4A6E-88EB-E57EAECD4291}.Release|Win32.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

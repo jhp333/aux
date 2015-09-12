@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "precontlib", "precontlib.vcproj", "{2276253E-0EDA-4A88-AEB3-2420B643B492}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "precont", "precont.vcproj", "{ACC8D79B-7D26-4F79-BEF5-7D737756F884}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2276253E-0EDA-4A88-AEB3-2420B643B492}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2276253E-0EDA-4A88-AEB3-2420B643B492}.Debug|Win32.Build.0 = Debug|Win32
+		{2276253E-0EDA-4A88-AEB3-2420B643B492}.Release|Win32.ActiveCfg = Release|Win32
+		{2276253E-0EDA-4A88-AEB3-2420B643B492}.Release|Win32.Build.0 = Release|Win32
+		{ACC8D79B-7D26-4F79-BEF5-7D737756F884}.Debug|Win32.ActiveCfg = Debug|Win32
+		{ACC8D79B-7D26-4F79-BEF5-7D737756F884}.Debug|Win32.Build.0 = Debug|Win32
+		{ACC8D79B-7D26-4F79-BEF5-7D737756F884}.Release|Win32.ActiveCfg = Release|Win32
+		{ACC8D79B-7D26-4F79-BEF5-7D737756F884}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

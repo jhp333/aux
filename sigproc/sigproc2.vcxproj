@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8CF1562D-8918-46EC-B0C2-A41C3A87D448}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>sigproc2</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\droppath.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\droppath.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>sigproc</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>sigproc</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;SIGPROC2_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>audfret.lib;iir.lib;RFFTW2dll.lib;Winmm.lib;libsamplerate.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;SIGPROC2_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>audfret.lib;iir.lib;RFFTW2dll.lib;Winmm.lib;libsamplerate.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="$(SrcPath)AstSig.cpp" />
+    <ClCompile Include="$(SrcPath)audstr.cpp" />
+    <ClCompile Include="$(SrcPath)AuxFunc.cpp" />
+    <ClCompile Include="$(SrcPath)calbase.cpp" />
+    <ClCompile Include="$(SrcPath)csignals.cpp" />
+    <ClCompile Include="$(SrcPath)CSigProcDlg.cpp" />
+    <ClCompile Include="$(SrcPath)eqsig.cpp" />
+    <ClCompile Include="$(SrcPath)internals.cpp" />
+    <ClCompile Include="$(SrcPath)lineparser.cpp" />
+    <ClCompile Include="$(SrcPath)matOperations.cpp" />
+    <ClCompile Include="$(SrcPath)psycon.tab.c" />
+    <ClCompile Include="$(SrcPath)psycon.yy.c" />
+    <ClCompile Include="$(SrcPath)remez.cpp" />
+    <ClCompile Include="$(SrcPath)sig_wav_misc.cpp" />
+    <ClCompile Include="$(SrcPath)StdAfx.cpp" />
+    <ClCompile Include="$(SrcPath)waves.cpp" />
+    <ClCompile Include="$(SrcPath)WndDlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(SrcPath)calbase.h" />
+    <ClInclude Include="$(SrcPath)cipsycon.tab.h" />
+    <ClInclude Include="$(SrcPath)csignals.h" />
+    <ClInclude Include="$(SrcPath)EqSig.h" />
+    <ClInclude Include="$(SrcPath)msgcrack.h" />
+    <ClInclude Include="$(SrcPath)psycon.tab.h" />
+    <ClInclude Include="$(SrcPath)psycon.yacc.h" />
+    <ClInclude Include="$(SrcPath)resource.h" />
+    <ClInclude Include="$(SrcPath)samplerate.h" />
+    <ClInclude Include="$(SrcPath)sigplus_internal.h" />
+    <ClInclude Include="$(SrcPath)sigproc.h" />
+    <ClInclude Include="$(SrcPath)sigprocdlg.h" />
+    <ClInclude Include="$(SrcPath)StdAfx.h" />
+    <ClInclude Include="$(SrcPath)WndDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="$(SrcPath)sigproc.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
